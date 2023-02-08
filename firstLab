@@ -1,0 +1,29 @@
+nadaalaa@nadaalaa-VirtualBox:~/Desktop/testFolder$ mkdir iti-0
+nadaalaa@nadaalaa-VirtualBox:~/Desktop/testFolder/iti-0$ touch file1.txt file2.txt
+nadaalaa@nadaalaa-VirtualBox:~/Desktop/testFolder/iti-0$ echo hell9 all>file1.txt
+nadaalaa@nadaalaa-VirtualBox:~/Desktop/testFolder/iti-0$ cat  file1.txt | tr "9" "o" > file2.txt
+nadaalaa@nadaalaa-VirtualBox:~/Desktop/testFolder/iti-0$ cat file1.txt
+hell9 all
+nadaalaa@nadaalaa-VirtualBox:~/Desktop/testFolder/iti-0$ cat file2.txt
+hello all
+nadaalaa@nadaalaa-VirtualBox:~/Desktop/testFolder/iti-0$ rm  file1.txt
+nadaalaa@nadaalaa-VirtualBox:~/Desktop/testFolder/iti-0$ cat file1.txt
+cat: file1.txt: No such file or directory
+nadaalaa@nadaalaa-VirtualBox:~/Desktop/testFolder/iti-0$ cd /../../
+nadaalaa@nadaalaa-VirtualBox:/$ ls
+bin   cdrom  etc   lib    lib64   lost+found  mnt  proc  run   srv       sys  usr
+boot  dev    home  lib32  libx32  media       opt  root  sbin  swapfile  tmp  var
+nadaalaa@nadaalaa-VirtualBox:/$ cd var
+nadaalaa@nadaalaa-VirtualBox:/var$ ls
+backups  cache  lib  local  lock  log  mail  opt  run  spool  tmp
+nadaalaa@nadaalaa-VirtualBox:/$ ls /var > ~/Desktop/testFolder/iti-0/listing.txt
+nadaalaa@nadaalaa-VirtualBox:/$ cd ~/Desktop/testFolder/iti-0
+nadaalaa@nadaalaa-VirtualBox:~/Desktop/testFolder/iti-0$ mv listing.txt list_output.txt
+nadaalaa@nadaalaa-VirtualBox:~/Desktop/testFolder/iti-0$ nl  list_output.txt > list_output_number.txt
+nadaalaa@nadaalaa-VirtualBox:~/Desktop/testFolder/iti-0$ head -n 5 list_output_number.txt
+     1	backups
+     2	cache
+     3	lib
+     4	local
+     5	lock
+nadaalaa@nadaalaa-VirtualBox:~/Desktop/testFolder/iti-0$ 
